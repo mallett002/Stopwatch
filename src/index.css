@@ -1,0 +1,141 @@
+/*Core Styles*/
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-image: url(images/trees.jpg);
+  background-position: center;
+  background-size: 129%;
+}
+
+button {
+  padding: 1em;
+  font-size: 1em;
+  border-width: 3px;
+  width: 8em;
+  margin: .5em;
+  cursor: pointer;
+  outline: none;
+  border-radius: 8px;
+  color: white;
+  background: #313131;
+}
+
+button:hover {
+  color: white;
+  background: #28354a;
+  box-shadow: 0 0 16px rgb(212, 212, 212);
+  border-color: #d89428;
+  transition: ease-in-out .2s;
+}
+
+/*App*/
+.stopwatch-container {
+  text-align: center;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* TimerDisplay */
+
+.clock-face {
+  margin: 2em auto;
+  margin-bottom: 2em;
+  border: 10px solid #5b6075;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 25px white;
+  box-shadow: 0 0 40px black;
+  width: 14rem;
+  height: 14rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  background: #28354a;
+}
+
+tr {
+  position: absolute;
+  right: 11%;
+  top: 40%;
+  background: black;
+  border-radius: 10px;
+  border: 4px solid #3c3c3c;
+  width: 78%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: .5em;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+td {
+  font-size: 1em;
+  padding: .3em;
+  color: #fff;
+}
+
+#display {
+  margin: 0;
+}
+
+/*Clock Hand*/
+.second-hand {
+  width: 50%;
+  height: 2px;
+  background: black;
+  position: absolute;
+  right: 50%;
+  -webkit-transform-origin: 100%;
+  -ms-transform-origin: 100%;
+  transform-origin: 100%;
+  -webkit-transition: all cubic-bezier(0, 0, 0.51, 0.51) 1.5s;
+  -o-transition: all cubic-bezier(0, 0, 0.51, 0.51) 1.5s;
+  transition: all cubic-bezier(0, 0, 0.51, 0.51) 1.5s;
+  background: #d89428;
+  border: 0;
+  -webkit-box-shadow: 0 5px 20px #ffafaf;
+  box-shadow: 0 5px 20px #ffafaf;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 700px) {
+  body {
+    background-size: cover;
+  }
+  
+  .clock-face {
+    width: 25rem;
+    height: 25rem;
+  }
+
+  .button-container {
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 60em;
+    margin: 0 auto;
+    margin-top: 4em;
+  }
+
+  button {
+    margin: 0;
+  }
+
+  .clock-face {
+    border: 20px solid #5b6075;
+  }
+
+  td {
+    font-size: 2em;
+  }
+}
